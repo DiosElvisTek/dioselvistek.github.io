@@ -56,7 +56,7 @@
         <div class="BGModal" id="Modal">
             <div class="AddModal">
                     <form class="GroupInputsModal" id="AddForm">
-                        <p>Nombre:</p>
+                        <p>Nombree:</p>
                         <input type="text" placeholder="Nombre del wallpaper" maxlength="50" id="Name" required>
                         <p>Género:</p>
                         <input type="text" placeholder="Anime, Naturaleza, Videojuegos, etc" maxlength="50" id="Genre" required>
