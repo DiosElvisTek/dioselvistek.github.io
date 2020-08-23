@@ -1,0 +1,730 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*------ AQUI EMPIEZA EL CSS DEL BOTON DE CONFIGURACION ------*/
+.ModoOscuro{
+    transition: 1s;
+    width: 140px;
+    height: 120px;
+    background: #ddd;
+    position: fixed;
+    top: 35%;
+    left: -140px;
+}
+.Configuracion{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5em;
+    background: #ddd;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    cursor: pointer;
+}
+.ModoOscuro.active{
+    transition: 1s;
+    left: 0px !important;
+}
+.Configuracion i{
+    animation: Settings 2s infinite linear;
+}
+@keyframes Settings {
+    to {
+        transform: rotate(360deg)
+    }
+}
+/*------ AQUI TERMINA EL CSS DEL BOTON DE CONFIGURACION ------*/
+
+/*------ AQUI EMPIEZA EL CSS DEL ENCABEZADO ------*/
+.Encabezado{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    border-bottom:1px solid #00aeef;
+}
+.Encabezado span{
+    float: right;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+.Encabezado span i{
+    font-size: 2em;
+    color: #00aeef;
+    transition: .6s;
+}
+.Encabezado span:hover i{
+    color: #006bb1;
+    cursor: pointer;
+    transition: .6s;
+    transform: scale(1.1);
+}
+/*------ AQUI TERMINA EL CSS DEL ENCABEZADO ------*/
+
+/*------ AQUI EMPIEZA EL CSS DEL NAVBAR ------*/
+.Navbar{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: -100%;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+}
+.Menu{
+    list-style: none;
+    display: grid;
+    place-items: center;
+    gap: 25px;
+    font-size: 2em;
+}
+.Menu a{
+    text-decoration: none;
+    color: #00aeef;
+    transition: .6s;
+}
+.Menu a:hover{
+    text-decoration: none;
+    color: #006bb1;
+    transition: .6s;
+    letter-spacing: 10px;
+}
+.Iconos{
+    display: flex;
+    list-style: none;
+}
+.Iconos a{
+    font-size: 2em;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00aeef;
+}
+.Navbar.active{
+    top: 0;
+    transition: .6s;
+}
+.fa-twitter, .fa-facebook-f, .fa-instagram, .fa-envelope, .fa-whatsapp{
+    transition: .6s;
+}
+.fa-twitter:hover{
+    transition: .6s;
+    transform: rotate(15deg) scale(1.5);
+    color: #00acee;
+}
+.fa-facebook-f:hover{
+    transition: .6s;
+    transform: rotate(15deg) scale(1.5);
+    color: #3b5998;
+}
+.fa-instagram:hover{
+    transition: .6s;
+    transform: rotate(15deg) scale(1.5);
+    color: #DD2A7B;
+}
+.fa-envelope:hover{
+    transition: .6s;
+    transform: rotate(15deg) scale(1.5);
+    color: #ff0000;
+}
+.fa-whatsapp:hover{
+    transition: .6s;
+    transform: rotate(15deg) scale(1.5);
+    color: #25d366;
+}
+/*------ AQUI EMPIEZA EL CSS DEL NAVBAR ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION PRESENTACION ------*/
+.Presentacion{
+    width: 100%;
+    height: 530px;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(0,107,177,0.5),
+        rgba(0,107,177,0.5)
+    ),
+    url(img/BgPresentacion.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.InfoPresentacion{
+    text-align: center;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION PRESENTACION ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION HABILIDADES ------*/
+.Habilidades{
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "Card-1 Card-2 Card-3";
+}
+.Card-1, .Card-2, .Card-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.Card-1{
+    grid-area: Card-1;
+}
+.Card-2{
+    grid-area: Card-2;
+}
+.Card-3{
+    grid-area: Card-3;
+}
+.Card-1 img, .Card-2 img, .Card-3 img{
+    width: 200px;
+    max-width: 200px;
+    height: 150px;
+    max-height: 150px;
+}
+.Card-1 h1, .Card-2 h1, .Card-3 h1, .Card-1 p, .Card-2 p, .Card-3 p{
+    margin: 20px;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION HABILIDADES ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION SERVICIOS ------*/
+.Servicios{
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "TituloServicio TituloServicio TituloServicio TituloServicio"
+    "Servicio-1 Servicio-2 Servicio-3 Servicio-4";
+}
+.TituloServicio{
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: TituloServicio;
+}
+.Servicio-1{
+    grid-area: Servicio-1;
+}
+.Servicio-2{
+    grid-area: Servicio-2;
+}
+.Servicio-3{
+    grid-area: Servicio-3;
+}
+.Servicio-4{
+    grid-area: Servicio-4;
+}
+.Servicio-1, .Servicio-2, .Servicio-3, .Servicio-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.Servicio-1 p, .Servicio-2 p, .Servicio-3 p, .Servicio-4 p{
+    margin: 20px
+}
+.Servicio-1 img, .Servicio-2 img, .Servicio-3 img,  .Servicio-4 img{
+    width: 100px;
+    max-width: 100px;
+    margin: 20px;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION SERVICIOS ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION EXPERIENCIA DE USUARIOS ------*/
+.ExperienciaUsuarios{
+    width: 100%;
+    height: 470px;
+    max-height: 470px;
+    background: linear-gradient(
+        rgba(0,107,177,0.5),
+        rgba(0,107,177,0.5)
+    ),
+    url(img/BgComentarios.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.Comentario{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.Comentario h1{
+    margin-bottom: 50px;
+}
+.Comentario img{
+    width: 60px;
+    max-width: 60px;
+    margin: 20px;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION EXPERIENCIA DE USUARIOS ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE COMO TRABAJO ------*/
+.ComoTrabajo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "InfoTrabajo InfoTrabajo InfoTrabajo"
+    "Trabajo-1 Trabajo-2 Trabajo-3"
+    "BotonEmpezar BotonEmpezar BotonEmpezar";
+}
+.InfoTrabajo{
+    padding: 100px 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: InfoTrabajo;
+    gap: 30px;
+}
+.Trabajo-1, .Trabajo-2, .Trabajo-3{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.Trabajo-1{
+    grid-area: Trabajo-1;
+    position: relative;
+}
+.Trabajo-1::before{
+    content: '';
+    width: 200%;
+    height: 1px;
+    position: absolute;
+    top: 70px;
+    left: 60%;
+    background: #d0d0d0;
+    z-index: -1;
+}
+.Trabajo-1 i, .Trabajo-2 i, .Trabajo-3 i{
+    height: 100px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+    color: #fff;
+    border-radius: 50%;
+}
+.Trabajo-1 i{
+    background: #00aeef;
+}
+.Trabajo-2{
+    grid-area: Trabajo-2;
+}
+.Trabajo-2 i{
+    background: #0d81cd;
+}
+.Trabajo-3{
+    grid-area: Trabajo-3;
+}
+.Trabajo-3 i{
+    background: #006bb1;
+}
+.BotonEmpezar{
+    padding: 100px 0px;
+    grid-area: BotonEmpezar;
+    display: grid;
+    place-items: center;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION DE COMO TRABAJO ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE MIS SITIOS ------*/
+.MisSitios{
+    width: 100%;
+    background: #f6f7f9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "TituloSitio TituloSitio TituloSitio"
+    "Sitio-1 Sitio-2 Sitio-3"
+    "BotonSitio BotonSitio BotonSitio";
+}
+.TituloSitio{
+    padding: 70px 0px;
+    text-align: center;
+    grid-area: TituloSitio;
+}
+.Sitio-1 img, .Sitio-2 img, .Sitio-3 img{
+    width: 100%;
+}
+.Sitio-1, .Sitio-2, .Sitio-3{
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+}
+.Sitio-1{
+    grid-area: Sitio-1;
+}
+.Sitio-2{
+    grid-area: Sitio-2;
+}
+.Sitio-3{
+    grid-area: Sitio-3;
+}
+.BotonSitio{
+    padding: 70px 0px;
+    grid-area: BotonSitio;
+    display: grid;
+    place-items: center;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION DE MIS SITIOS ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE CONTACTO ------*/
+.Contactame{
+    width: 100%;
+    background: linear-gradient(
+        rgba(0,107,177,0.5),
+        rgba(0,107,177,0.5)
+    ),
+    url(img/BgContactame.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.Contactame button{
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 2em;
+    background: #00aeef;
+    color: #fff;
+    position: absolute;
+    bottom: -35px;
+    left: calc(50% - 35px);
+}
+.Contactame button:hover{
+    background: #006bb1;
+    cursor: pointer;
+}
+.PresentacionDeContacto{
+    text-align: center;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.FormularioDeContacto{
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Nombre Email";
+    gap: 20px;
+}
+.FormularioDeContacto input{
+    padding: 0px 10px;
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+}
+.Nombre{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: Nombre;
+}
+.Email{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    grid-area: Email;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION DE CONTACTO ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE NUESTRO EQUIPO ------*/
+.NuestroEquipo{
+    width: 100%;
+}
+.PresentacionDeEquipo{
+    text-align: center;
+    padding: 70px 0px;
+    display: grid;
+}
+.PerfilEquipo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "Perfil-1 Perfil-2 Perfil-3"
+    "Perfil-4 Perfil-5 Perfil-6";
+    gap: 20px;
+}
+.Perfil-1{
+    grid-area: Perfil-1;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.Perfil-2{
+    grid-area: Perfil-2;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.Perfil-3{
+    grid-area: Perfil-3;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.Perfil-4{
+    grid-area: Perfil-4;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-4.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.Perfil-5{
+    grid-area: Perfil-5;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-5.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.Perfil-6{
+    grid-area: Perfil-6;
+    background-image: linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    ),
+    url(img/Perfil-6.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.Perfil-1:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-1:hover .RedesPerfil{
+    bottom: 0px;
+}
+.Perfil-2:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-2:hover .RedesPerfil{
+    bottom: 0px;
+}
+.Perfil-3:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-3:hover .RedesPerfil{
+    bottom: 0px;
+}
+.Perfil-4:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-4:hover .RedesPerfil{
+    bottom: 0px;
+}
+.Perfil-5:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-5:hover .RedesPerfil{
+    bottom: 0px;
+}
+.Perfil-6:hover .InfoPerfil h1{
+    bottom: 70px;
+}
+.Perfil-6:hover .RedesPerfil{
+    bottom: 0px;
+}
+.InfoPerfil{
+    height: 100%;
+    position: relative;
+}
+.InfoPerfil h1{
+    color: #fff;
+    transition: .6s;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px 20px;
+}
+.RedesPerfil{
+    transition: .6s;
+    background: #006bb1;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    position: absolute;
+    bottom: -50px;
+}
+.RedesPerfil a{
+    text-decoration: none;
+    color: #fff;
+}
+/*------ AQUI TERMINA EL CSS DE LA SECCION DE NUESTRO EQUIPO ------*/
+
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE PIE ------*/
+.Pie{
+    width: 100%;
+    overflow: hidden;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+.Derechos{
+    float: left;
+}
+.Autores{
+    float: right;
+}
+/*------ AQUI EMPIEZA EL CSS DE LA SECCION DE PIE ------*/
+
+
+@media (max-width: 980px){
+    .PerfilEquipo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "Perfil-1 Perfil-2"
+        "Perfil-3 Perfil-4"
+        "Perfil-5 Perfil-6";
+    }
+}
+@media (max-width: 768px){
+    .Habilidades{
+        height: auto;
+        grid-template-areas: "Card-1 Card-1 Card-1"
+        "Card-2 Card-2 Card-2"
+        "Card-3 Card-3 Card-3";
+    }
+    .Card-1, .Card-2, .Card-3{
+        padding: 10px 0px;
+        background: red;
+    }
+    .Servicios{
+        grid-template-areas: "TituloServicio TituloServicio TituloServicio TituloServicio"
+        "Servicio-1 Servicio-1 Servicio-2 Servicio-2"
+        "Servicio-3 Servicio-3 Servicio-4 Servicio-4";
+    }
+    .ComoTrabajo{
+        grid-template-areas: "InfoTrabajo InfoTrabajo InfoTrabajo"
+        "Trabajo-1 Trabajo-1 Trabajo-1"
+        "Trabajo-2 Trabajo-2 Trabajo-2"
+        "Trabajo-3 Trabajo-3 Trabajo-3"
+        "BotonEmpezar BotonEmpezar BotonEmpezar";
+    }
+    .Trabajo-1::before{
+        display: none;
+    }
+    .MisSitios{
+        grid-template-areas: "TituloSitio TituloSitio TituloSitio"
+        "Sitio-1 Sitio-1 Sitio-1"
+        "Sitio-2 Sitio-2 Sitio-2"
+        "Sitio-3 Sitio-3 Sitio-3"
+        "BotonSitio BotonSitio BotonSitio";
+    }
+    .FormularioDeContacto{
+        grid-template-areas: "Nombre Nombre"
+        "Email Email";
+    }
+    .FormularioDeContacto input{
+        width: 90%;
+    }
+    .Nombre, .Email{
+        justify-content: center;
+    }
+    .Pie{
+        text-align: center;
+    }
+    .Derechos, .Autores{
+        padding: 10px 0px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px){
+    .Servicios{
+        grid-template-areas: "TituloServicio TituloServicio TituloServicio TituloServicio"
+        "Servicio-1 Servicio-1 Servicio-1 Servicio-1"
+        "Servicio-2 Servicio-2 Servicio-2 Servicio-2"
+        "Servicio-3 Servicio-3 Servicio-3 Servicio-3"
+        "Servicio-4 Servicio-4 Servicio-4 Servicio-4";
+    }
+    .Servicio-1, .Servicio-2, .Servicio-3, .Servicio-4{
+        padding: 10px 0px;
+        margin: 10px 0px;
+        background: red;
+    }
+    .PerfilEquipo {
+        grid-template-areas: "Perfil-1 Perfil-1"
+        "Perfil-2 Perfil-2"
+        "Perfil-3 Perfil-3"
+        "Perfil-4 Perfil-4"
+        "Perfil-5 Perfil-5"
+        "Perfil-6 Perfil-6";
+    }
+}
