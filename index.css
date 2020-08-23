@@ -120,27 +120,27 @@
 .fa-twitter, .fa-facebook-f, .fa-instagram, .fa-envelope, .fa-whatsapp{
     transition: .6s;
 }
-.fa-twitter:hover{
+.Iconos .fa-twitter:hover{
     transition: .6s;
     transform: rotate(15deg) scale(1.5);
     color: #00acee;
 }
-.fa-facebook-f:hover{
+.Iconos .fa-facebook-f:hover{
     transition: .6s;
     transform: rotate(15deg) scale(1.5);
     color: #3b5998;
 }
-.fa-instagram:hover{
+.Iconos .fa-instagram:hover{
     transition: .6s;
     transform: rotate(15deg) scale(1.5);
     color: #DD2A7B;
 }
-.fa-envelope:hover{
+.Iconos .fa-envelope:hover{
     transition: .6s;
     transform: rotate(15deg) scale(1.5);
     color: #ff0000;
 }
-.fa-whatsapp:hover{
+.Iconos .fa-whatsapp:hover{
     transition: .6s;
     transform: rotate(15deg) scale(1.5);
     color: #25d366;
