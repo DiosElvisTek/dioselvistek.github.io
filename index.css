@@ -155,6 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background: linear-gradient(
         rgba(0,107,177,0.5),
         rgba(0,107,177,0.5)
@@ -167,6 +168,61 @@
 }
 .InfoPresentacion{
     text-align: center;
+}
+.InfoPresentacion h1{
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.InfoPresentacion p{
+    padding: 0;
+    margin: 20px 0px;
+    font-weight: 800;
+}
+.button{
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.button a{
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    transition: .9s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.button a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .3s;
+    z-index: -1;
+}
+.button a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .9s;
+    z-index: -1;
+}
+.button a:hover::before, a:hover::after, a:hover{
+    transform: translate(0%) rotate(0deg);
+    color: rgba(0,107,177);
 }
 /*------ AQUI TERMINA EL CSS DE LA SECCION PRESENTACION ------*/
 
@@ -184,6 +240,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    padding: 15px 0px;
 }
 .Card-1{
     grid-area: Card-1;
@@ -200,8 +257,16 @@
     height: 150px;
     max-height: 150px;
 }
-.Card-1 h1, .Card-2 h1, .Card-3 h1, .Card-1 p, .Card-2 p, .Card-3 p{
+.Card-1 h1, .Card-2 h1, .Card-3 h1{
     margin: 20px;
+    color: #4a4a4a;
+}
+.Card-1 p, .Card-2 p, .Card-3 p{
+    color: #929292;
+    margin: 15px;
+}
+.Card-1:hover, .Card-2:hover, .Card-3:hover{
+    border-bottom: 4px solid #007bff;
 }
 /*------ AQUI TERMINA EL CSS DE LA SECCION HABILIDADES ------*/
 
@@ -223,6 +288,15 @@
     text-align: center;
     grid-area: TituloServicio;
 }
+.TituloServicio h1{
+    color: #4a4a4a;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+.TituloServicio p{
+    color: #929292;
+}
 .Servicio-1{
     grid-area: Servicio-1;
 }
@@ -242,13 +316,68 @@
     flex-direction: column;
     text-align: center;
 }
+.Servicio-1 h3, .Servicio-2 h3, .Servicio-3 h3, .Servicio-4 h3{
+    color: #4a4a4a;
+    transition: .9s;
+}
 .Servicio-1 p, .Servicio-2 p, .Servicio-3 p, .Servicio-4 p{
-    margin: 20px
+    margin: 20px;
+    color: #929292;
 }
 .Servicio-1 img, .Servicio-2 img, .Servicio-3 img,  .Servicio-4 img{
     width: 100px;
     max-width: 100px;
     margin: 20px;
+}
+.Servicio-1 a, .Servicio-2 a, .Servicio-3 a, .Servicio-4 a{
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #4a4a4a;
+    transition: .9s;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255);
+}
+.Servicio-1 a::before, .Servicio-2 a::before, .Servicio-3 a::before, .Servicio-4 a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .3s;
+    z-index: -1;
+}
+.Servicio-1 a::after, .Servicio-2 a::after, .Servicio-3 a::after, .Servicio-4 a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .9s;
+    z-index: -1;
+}
+.Servicio-1 a:hover::before, a:hover::after, .Servicio-2 a:hover::before, a:hover::after, .Servicio-3 a:hover::before, a:hover::after, .Servicio-4 a:hover::before, a:hover::after{
+    transform: translate(0%) rotate(0deg);
+}
+.Servicio-1 a:hover, .Servicio-2 a:hover, .Servicio-3 a:hover, .Servicio-4 a:hover{
+    border: 1px solid #006bb1;
+    border-radius: 5px;
+    background: #006bb1;
+    color: #006bb1;
+}
+.Servicio-1:hover h3, .Servicio-2:hover h3, .Servicio-3:hover h3, .Servicio-4:hover h3{
+    color: #006bb1;
+    transition: .9s;
 }
 /*------ AQUI TERMINA EL CSS DE LA SECCION SERVICIOS ------*/
 
@@ -357,6 +486,48 @@
     display: grid;
     place-items: center;
 }
+.BotonEmpezar a{
+    text-decoration: none;
+    padding: 15px 70px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    transition: .9s;
+    border-radius: 5px;
+    font-weight: 800;
+    background:rgba(0,107,177);
+    border: 1px solid rgba(0,107,177);
+}
+.BotonEmpezar a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .3s;
+    z-index: -1;
+}
+.BotonEmpezar a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .9s;
+    z-index: -1;
+}
+.BotonEmpezar a:hover::before, a:hover::after, a:hover{
+    transform: translate(0%) rotate(0deg);
+    color: rgba(0,107,177);
+}
 /*------ AQUI TERMINA EL CSS DE LA SECCION DE COMO TRABAJO ------*/
 
 /*------ AQUI EMPIEZA EL CSS DE LA SECCION DE MIS SITIOS ------*/
@@ -396,6 +567,48 @@
     grid-area: BotonSitio;
     display: grid;
     place-items: center;
+}
+.BotonSitio a{
+    text-decoration: none;
+    padding: 15px 70px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    transition: .9s;
+    border-radius: 5px;
+    font-weight: 800;
+    background:rgba(0,107,177);
+    border: 1px solid rgba(0,107,177);
+}
+.BotonSitio a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .3s;
+    z-index: -1;
+}
+.BotonSitio a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-190%) rotate(-30deg);
+    transition: .9s;
+    z-index: -1;
+}
+.BotonSitio a:hover::before, a:hover::after, a:hover{
+    transform: translate(0%) rotate(0deg);
+    color: rgba(0,107,177);
 }
 /*------ AQUI TERMINA EL CSS DE LA SECCION DE MIS SITIOS ------*/
 
@@ -662,10 +875,6 @@
         grid-template-areas: "Card-1 Card-1 Card-1"
         "Card-2 Card-2 Card-2"
         "Card-3 Card-3 Card-3";
-    }
-    .Card-1, .Card-2, .Card-3{
-        padding: 10px 0px;
-        background: red;
     }
     .Servicios{
         grid-template-areas: "TituloServicio TituloServicio TituloServicio TituloServicio"
